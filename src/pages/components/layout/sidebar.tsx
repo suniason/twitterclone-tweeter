@@ -36,9 +36,9 @@ const Sidebar: React.FC = () => {
       <div className='flex flex-col items-end'>
         <div className='space-y-2 lg:w-[230px]'>
           <SidebarLogo />
-          {items.map((items, key) => (
+          {items.map(items => (
             <SidebarItem
-              key={key}
+              key={items.href}
               href={items.href}
               label={items.label}
               icon={items.icon}
