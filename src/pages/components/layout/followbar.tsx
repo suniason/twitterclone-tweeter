@@ -1,4 +1,4 @@
-import useUsers from '@/pages/hooks/useusers'
+import useUsers from '@/hooks/useusers'
 import React from 'react'
 import Avatar from '../avatar'
 

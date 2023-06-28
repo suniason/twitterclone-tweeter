@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import useUser from '../hooks/useuser'
+import useUser from '../../hooks/useuser'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 

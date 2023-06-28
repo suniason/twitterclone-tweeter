@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import React, { useCallback } from 'react'
 import { FaFeather } from 'react-icons/fa'
-import useLoginModal from '@/pages/hooks/useloginmodal'
+import useLoginModal from '@/hooks/useloginmodal'
 
 const SidebarTweetButton: React.FC = () => {
   const router = useRouter()

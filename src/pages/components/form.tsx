@@ -1,13 +1,13 @@
 import React, { useCallback } from 'react'
-import useRegisterModal from '../hooks/useregistermodal'
-import useLoginModal from '../hooks/useloginmodal'
-import useCurrentUser from '../hooks/usecurrentuser'
-import usePosts from '../hooks/useposts'
+import useRegisterModal from '../../hooks/useregistermodal'
+import useLoginModal from '../../hooks/useloginmodal'
+import useCurrentUser from '../../hooks/usecurrentuser'
+import usePosts from '../../hooks/useposts'
 import toast from 'react-hot-toast'
 import axios from 'axios'
 import Avatar from './avatar'
 import Button from './button'
-import usePost from '../hooks/usepost'
+import usePost from '../../hooks/usepost'
 
 interface FormProps {
   placeholder: string

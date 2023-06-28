@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import useCurrentUser from '../hooks/usecurrentuser'
-import useNotifications from '../hooks/usenotifications'
+import useCurrentUser from '../../hooks/usecurrentuser'
+import useNotifications from '../../hooks/usenotifications'
 import { BsTwitter } from 'react-icons/bs'
 
 const NotificationFeed: React.FC = () => {

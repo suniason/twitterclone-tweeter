@@ -1,11 +1,11 @@
-import useCurrentUser from '@/pages/hooks/usecurrentuser'
-import useLoginModal from '@/pages/hooks/useloginmodal'
+import useCurrentUser from '@/hooks/usecurrentuser'
+import useLoginModal from '@/hooks/useloginmodal'
+import useLike from '@/hooks/uselike'
 import { formatDistanceToNowStrict } from 'date-fns'
 import { useRouter } from 'next/router'
 import React, { useCallback, useMemo } from 'react'
 import Avatar from '../avatar'
 import { AiOutlineHeart, AiFillHeart, AiOutlineMessage } from 'react-icons/ai'
-import useLike from '@/pages/hooks/uselike'
 
 interface PostItemProps {
   data: Record<string, any>

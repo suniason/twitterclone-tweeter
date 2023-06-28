@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import Header from '../components/header'
-import useUser from '../hooks/useuser'
+import useUser from '../../hooks/useuser'
 import { ClipLoader } from 'react-spinners'
 import UserHero from '../components/users/userhero'
 import UserBio from '../components/users/userbio'

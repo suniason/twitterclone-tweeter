@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import React from 'react'
-import usePost from '../hooks/usepost'
+import usePost from '../../hooks/usepost'
 import { ClipLoader } from 'react-spinners'
 import Header from '../components/header'
 import PostItem from '../components/posts/postitem'
@@ -23,7 +23,7 @@ const PostView: React.FC = () => {
   return (
     <>
       <Header label='Tweet' showBackArrow />
-      <PostItem data={fetchedPost} />
+      <PostItem data={fetchedPost} userId={''} />
       <Form postId={postId as string} isComment placeholder='Tweet your reply' />
       <CommentFeed comments={fetchedPost?.comments} />
     </>

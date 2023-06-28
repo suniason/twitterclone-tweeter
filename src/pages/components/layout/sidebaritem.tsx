@@ -1,5 +1,5 @@
-import useCurrentUser from '@/pages/hooks/usecurrentuser'
-import useLoginModal from '@/pages/hooks/useloginmodal'
+import useCurrentUser from '@/hooks/usecurrentuser'
+import useLoginModal from '@/hooks/useloginmodal'
 import { useRouter } from 'next/router'
 import React, { useCallback } from 'react'
 import { IconType } from 'react-icons'
@@ -25,6 +25,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
   const loginModal = useLoginModal()
   const { data: currentUser } = useCurrentUser()
   const router = useRouter()
+
   const handleClick = useCallback(() => {
     if (onClick) return onClick()
     if (auth && !currentUser) loginModal.onOpen()

@@ -1,8 +1,8 @@
-import useLoginModal from '@/pages/hooks/useloginmodal'
+import useLoginModal from '@/hooks/useloginmodal'
 import React, { useCallback } from 'react'
 import Input from '../input'
 import Modal from '../modal'
-import useRegisterModal from '@/pages/hooks/useregistermodal'
+import useRegisterModal from '@/hooks/useregistermodal'
 import { signIn } from 'next-auth/react'
 
 const LoginModal: React.FC = () => {

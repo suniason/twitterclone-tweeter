@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react'
+import { useCallback, useMemo } from 'react'
 import useCurrentUser from './usecurrentuser'
 import usePost from './usepost'
 import usePosts from './useposts'

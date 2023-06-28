@@ -1,4 +1,4 @@
-import usePosts from '@/pages/hooks/useposts'
+import usePosts from '@/hooks/useposts'
 import React from 'react'
 import PostItem from './postitem'
 
@@ -12,7 +12,7 @@ const PostFeed: React.FC<PostFeedProps> = ({ userId }) => {
   return (
     <>
       {posts.map((post: Record<string, any>) => (
-        <PostItem userId={userId} key={post.id} data={post} />
+        <PostItem userId={userId as string} key={post.id} data={post} />
       ))}
     </>
   )
