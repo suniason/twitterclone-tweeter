@@ -7,14 +7,14 @@ interface CommentItemProps {
   data: Record<string, any>
 }
 
-const CommentItem: React.FC<CommentItemProps> = ({ data }) => {
+const CommentItem: React.FC<CommentItemProps> = ({ data = {} }) => {
   const router = useRouter()
   const goToUser = useCallback(
     (event: any) => {
       event.stopPropagation()
       router.push(`/users/${data.user.id}`)
     },
-    [router, data.user.id]
+    [router, data.user?.id]
   )
 
   const createdAt = useMemo(() => {
@@ -23,6 +23,10 @@ const CommentItem: React.FC<CommentItemProps> = ({ data }) => {
     }
     return formatDistanceToNowStrict(new Date(data.createdAt))
   }, [data?.createdAt])
+
+  if (!data || !data.user) {
+    return null
+  }
 
   return (
     <div className='border-b-[1px] border-neutral-800 p-5 cursor-pointer hover:bg-neutral-900 transition'>

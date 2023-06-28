@@ -1,7 +1,4 @@
 import React from 'react'
-import { BsBellFill, BsHouseFill } from 'react-icons/bs'
-import { FaUser } from 'react-icons/fa'
-import { BiLogOut } from 'react-icons/bi'
 import SidebarLogo from './sidebarlogo'
 import SidebarItem from './sidebaritem'
 import SidebarTweetButton from './sidebartweet'
@@ -14,19 +11,19 @@ const Sidebar: React.FC = () => {
     {
       label: 'Home',
       href: '/',
-      icon: BsHouseFill
+      icon: 'BsHouseFill'
     },
     {
       label: 'Notifications',
       href: '/notifications',
-      icon: BsBellFill,
+      icon: 'BsBellFill',
       auth: true,
       alert: currentUser?.hasNotification
     },
     {
       label: 'Profile',
       href: `/users/${currentUser?.id}`,
-      icon: FaUser,
+      icon: 'FaUser',
       auth: true
     }
   ]
@@ -46,7 +43,9 @@ const Sidebar: React.FC = () => {
               alert={items.alert}
             />
           ))}
-          {currentUser && <SidebarItem onClick={() => signOut()} icon={BiLogOut} label='Logout' />}
+          {currentUser && (
+            <SidebarItem onClick={() => signOut()} icon={'BiLogOut'} label='Logout' />
+          )}
           <SidebarTweetButton />
         </div>
       </div>

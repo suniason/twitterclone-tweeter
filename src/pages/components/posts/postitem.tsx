@@ -12,7 +12,7 @@ interface PostItemProps {
   userId?: string
 }
 
-const PostItem: React.FC<PostItemProps> = ({ data, userId }) => {
+const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
   const router = useRouter()
   const loginModal = useLoginModal()
   const { data: currentUser } = useCurrentUser()
@@ -23,7 +23,7 @@ const PostItem: React.FC<PostItemProps> = ({ data, userId }) => {
       event.stopPropagation()
       router.push(`/users/${data.user.id}`)
     },
-    [router, data.user.id]
+    [router, data.user?.id]
   )
 
   const goToPost = useCallback(() => {
@@ -47,6 +47,10 @@ const PostItem: React.FC<PostItemProps> = ({ data, userId }) => {
   }, [data?.createdAt])
 
   const LikeIcon = hasLiked ? AiFillHeart : AiOutlineHeart
+
+  if (!data || !data.user) {
+    return null
+  }
 
   return (
     <div
