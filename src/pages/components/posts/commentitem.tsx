@@ -12,9 +12,9 @@ const CommentItem: React.FC<CommentItemProps> = ({ data }) => {
   const goToUser = useCallback(
     (event: any) => {
       event.stopPropagation()
-      if (data.user && data.user.id) router.push(`/users/${data.user.id}`)
+      router.push(`/users/${data.user.id}`)
     },
-    [router, data.user]
+    [router, data.user.id]
   )
 
   const createdAt = useMemo(() => {
@@ -23,10 +23,6 @@ const CommentItem: React.FC<CommentItemProps> = ({ data }) => {
     }
     return formatDistanceToNowStrict(new Date(data.createdAt))
   }, [data?.createdAt])
-
-  if (!data || !data.user) {
-    return null
-  }
 
   return (
     <div className='border-b-[1px] border-neutral-800 p-5 cursor-pointer hover:bg-neutral-900 transition'>
