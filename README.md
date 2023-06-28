@@ -1,9 +1,10 @@
 Server has not been initialized for the app. However, this can be cloned and connected to localhost.
 
 To run the application: 
+
 1. Clone the application on your local device(computer/laptop)
-2. 
-3. Run 
+
+2. Run 
 ```
 npm i
 ```
